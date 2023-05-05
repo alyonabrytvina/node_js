@@ -1,0 +1,4 @@
+.idea
+node_modules
+ch2/part1/cpu-memory.log
+ch2/part1/access.logs
