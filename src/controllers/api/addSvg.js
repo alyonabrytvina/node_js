@@ -11,7 +11,6 @@ module.exports = async (req, res, next) => {
         }
 
         const svgFile = new Svg();
-
         await db.insert(svgFile, content);
 
         return res.json(svgFile.toPublicJSON());

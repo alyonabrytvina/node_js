@@ -3,9 +3,10 @@ const path = require('path');
 const express = require('express');
 const setupMiddlewares = require('./middlewares/index');
 const errorHandler = require('./middlewares/errorHandler');
-const { PORT, svgFolder } = require('./config/index');
+const { PORT, svgFolder } = require('@config');
 const { apiRouter } = require('./routes/apiRouter');
 const { mainRouter } = require('./routes/mainRouter');
+const upgradeWs = require('./ws');
 
 const app = express();
 
@@ -23,4 +24,9 @@ app.use('/api', apiRouter);
 app.use('/', mainRouter);
 
 app.use(errorHandler);
-app.listen(PORT, () => console.log(`server started on port ${ PORT }`));
+
+const httpServer = app.listen(PORT, () =>
+    console.log(`server started on port ${ PORT }`)
+);
+
+upgradeWs(httpServer);

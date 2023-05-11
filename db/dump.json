@@ -1,19 +1,11 @@
 {
 	"idToSvg": {
-		"b11ba46f-9385-4a7b-94a6-0eb4708838a9": {
-			"id": "b11ba46f-9385-4a7b-94a6-0eb4708838a9",
-			"createdAt": 1683650004903
-		},
-		"df39021c-71b8-4611-828f-d71bc870bb41": {
-			"id": "df39021c-71b8-4611-828f-d71bc870bb41",
-			"createdAt": 1683802052379
-		},
-		"c3711a8f-274a-4e5a-86b6-c3a16392bfe4": {
-			"id": "c3711a8f-274a-4e5a-86b6-c3a16392bfe4",
-			"createdAt": 1683802055720
+		"a920ad4e-2f57-4fa5-a324-5bd62b8ac563": {
+			"id": "a920ad4e-2f57-4fa5-a324-5bd62b8ac563",
+			"createdAt": 1683818247237
 		}
 	},
 	"likedIds": {
-		"b11ba46f-9385-4a7b-94a6-0eb4708838a9": true
+		"a920ad4e-2f57-4fa5-a324-5bd62b8ac563": true
 	}
 }

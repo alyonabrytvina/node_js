@@ -4,16 +4,17 @@
     "http-proxy-middleware": "^2.0.6",
     "morgan": "^1.10.0",
     "pug": "^3.0.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "ws": "^8.13.0"
   },
   "devDependencies": {
     "module-alias": "^2.2.2"
   },
   "_moduleAliases": {
-    "@root": ".",
-    "@utils": "src/utils",
+    "@root": "src",
     "@controllers": "src/controllers",
     "@models": "src/models",
-    "@validators": "src/validators"
+    "@validators": "src/validators",
+    "@config": "src/config"
   }
 }

@@ -2,8 +2,6 @@ const { ApiError } = require('@validators/errors/ApiError');
 
 // у errorHandler обязательно должно быть 4 аргумента!
 module.exports = (err, req, res, next) => {
-    console.log(err.message);
-
     if (err instanceof ApiError) {
         return err.sendResponse(res);
     }

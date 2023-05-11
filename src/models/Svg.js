@@ -1,5 +1,5 @@
 const path = require('path');
-const { svgFolder } = require('../config');
+const { svgFolder } = require('@config');
 const { writeFile, removeFile } = require('../utils/fs');
 const { generateId } = require('../utils/generateId');
 

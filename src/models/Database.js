@@ -1,9 +1,9 @@
 const { EventEmitter } = require('events');
 const { existsSync } = require('fs');
-const { dbDumpFile } = require('../config');
+const { dbDumpFile } = require('@config');
+const Svg = require('./Svg');
 const { writeFile } = require('../utils/fs');
 const { prettifyJsonToString } = require('../utils/prettifyJsonToString');
-const Svg = require('./Svg');
 
 class Database extends EventEmitter {
     constructor() {
@@ -43,16 +43,6 @@ class Database extends EventEmitter {
         this.emit('changed');
     }
 
-    setLiked(svgId, value) {
-        if (value === false) {
-            delete this.likedIds[svgId];
-        } else {
-            this.likedIds[svgId] = true;
-        }
-
-        this.emit('changed');
-    }
-
     async remove(svgId) {
         const svgRaw = this.idToSvg[svgId];
 
@@ -66,6 +56,16 @@ class Database extends EventEmitter {
         this.emit('changed');
 
         return svgId;
+    }
+
+    setLiked(svgId, value) {
+        if (value === false) {
+            delete this.likedIds[svgId];
+        } else {
+            this.likedIds[svgId] = true;
+        }
+
+        this.emit('changed');
     }
 
     findOne(svgId) {

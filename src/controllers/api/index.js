@@ -3,10 +3,8 @@ const addSvg = require('./addSvg');
 const getSvg = require('./getSvg');
 const getSvgs = require('./getSvgs');
 const likeSvg = require('./likeSvg');
-const home = require('./home');
 
 module.exports = {
-    home,
     addSvg,
     getSvg,
     deleteSvg,
